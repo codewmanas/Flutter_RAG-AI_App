@@ -2,34 +2,52 @@ import 'package:flutter/material.dart';
 import 'package:myapp/theme/colors.dart';
 
 class SearchBarButton extends StatefulWidget {
-  const SearchBarButton({super.key});
+  final IconData icon;
+  final String text;
+
+  const SearchBarButton({super.key, required this.icon, required this.text});
 
   @override
   State<SearchBarButton> createState() => _SearchBarButtonState();
 }
 
 class _SearchBarButtonState extends State<SearchBarButton> {
+  bool isHovered = false;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(6),
-        color: Colors.transparent
-      ),
-      child: Row(
-        children:[
-          Icon(
-            Icons.plus_one,
-          color: AppColors.iconGrey,
-          size: 20,
-          ),
-          Text(
-            "Focus",
-            style: TextStyle(
-              color: AppColors.textGrey
-              ),
+    return MouseRegion(
+      onEnter: (event) {
+        setState(() {
+          isHovered = true;
+        });
+      },
+      onExit: (event) {
+        setState(() {
+          isHovered = false;
+        });
+      },
+      child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 9, vertical: 4),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(6),
+          color: isHovered ? AppColors.proButton : Colors.transparent
+        ),
+        child: Row(
+          children:[
+            Icon(
+              widget.icon,
+            color: AppColors.iconGrey,
+            size: 20,
             ),
-        ],
+            const SizedBox(width: 8),
+            Text(
+              widget.text,
+              style: TextStyle(
+                color: AppColors.textGrey
+                ),
+              ),
+          ],
+        ),
       ),
     );
   }
