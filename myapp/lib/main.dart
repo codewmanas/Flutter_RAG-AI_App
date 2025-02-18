@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'RAG-zilla',
       theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.submitButton),
         scaffoldBackgroundColor: AppColors.background,
         textTheme: GoogleFonts.interTextTheme(
           ThemeData.dark().textTheme,
