@@ -27,7 +27,7 @@ class _SearchBarButtonState extends State<SearchBarButton> {
         });
       },
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 9, vertical: 4),
+        padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(6),
           color: isHovered ? AppColors.proButton : Colors.transparent
@@ -42,7 +42,7 @@ class _SearchBarButtonState extends State<SearchBarButton> {
             const SizedBox(width: 8),
             Text(
               widget.text,
-              style: TextStyle(
+              style: const TextStyle(
                 color: AppColors.textGrey
                 ),
               ),

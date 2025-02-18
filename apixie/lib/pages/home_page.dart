@@ -16,11 +16,11 @@ class HomePage extends StatelessWidget {
           Expanded(
             child: Column(
               children: [
-                           Expanded(child: SearchSection()),  
+                           const Expanded(child: SearchSection()),  
                          // Footer
                          Container(
-                          padding: EdgeInsets.symmetric(vertical: 16),
-                          child: Wrap(
+                          padding: const EdgeInsets.symmetric(vertical: 16),
+                          child: const Wrap(
                             alignment: WrapAlignment.center,
                             children: [
                               Padding(

@@ -33,8 +33,8 @@ class SearchSection extends StatelessWidget {
           ),
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(16.0),
+              const Padding(
+                padding: EdgeInsets.all(16.0),
                 child: TextField(
                   decoration: InputDecoration(
                     hintText: 'Search for anything....',
@@ -52,19 +52,19 @@ class SearchSection extends StatelessWidget {
                 padding: const EdgeInsets.all(10.0),
                 child: Row(
                   children: [
-                    SearchBarButton(
+                    const SearchBarButton(
                       icon: Icons.auto_awesome_outlined,
                       text: "Focus"
                     ),
                     const SizedBox(width: 12),
-                    SearchBarButton(
+                    const SearchBarButton(
                       icon: Icons.add_circle_outline,
                       text: "Attach",
                     ),
                     const Spacer(),
                     Container(
                 
-                      padding:EdgeInsets.all(9),
+                      padding:const EdgeInsets.all(9),
                       decoration: BoxDecoration(
                             color: AppColors.submitButton,
                             borderRadius: BorderRadius.circular(40),

@@ -71,7 +71,7 @@ class _SidebarState extends State<Sidebar> {
                   },
                   child: AnimatedContainer(
                     duration: const Duration(milliseconds: 100),
-                    margin: EdgeInsets.symmetric(vertical: 14, horizontal: 10),
+                    margin: const EdgeInsets.symmetric(vertical: 14, horizontal: 10),
                     child: Icon(
                       isCollapsed? Icons.keyboard_arrow_right : Icons.keyboard_arrow_left,
                       color: AppColors.iconGrey,
