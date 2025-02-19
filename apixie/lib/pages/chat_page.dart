@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/widgets/sidebar.dart';
+import 'package:myapp/widgets/sources_section.dart';
 
 class ChatPage extends StatelessWidget {
   final String question;
@@ -24,7 +25,7 @@ class ChatPage extends StatelessWidget {
                     )
                     ),
                     SizedBox(height: 24),
-                    // sources
+                    SourcesSection(),
                     // answer section
               ],
             ),
