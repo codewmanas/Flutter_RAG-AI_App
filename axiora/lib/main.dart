@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:myapp/pages/chat_page.dart';
 import 'package:myapp/pages/home_page.dart';
 import 'package:myapp/theme/colors.dart';
 
@@ -14,15 +13,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'APIxie',
+      title: 'Manas Axiora',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.submitButton),
         scaffoldBackgroundColor: AppColors.background,
         textTheme: GoogleFonts.interTextTheme(
-          ThemeData.dark().textTheme,
+          ThemeData.dark().textTheme.copyWith(
+            bodyMedium:  const TextStyle(
+              fontSize: 16,
+              color: AppColors.whiteColor,
+            )
+          ),
         ),
       ),
-      home: const ChatPage(question: 'What is India vs Australia',), 
+      home: HomePage(), 
     );
   }
 }
